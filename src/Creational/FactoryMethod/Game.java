@@ -13,12 +13,12 @@ public class Game {
 
     public void CreateMap() {
         Map map = new CityMap();
-        int mapSize = 5;
+        int mapGridSize = 5;
 
-        for(int x = 0; x < mapSize; x++) {
+        for(int x = 0; x < mapGridSize; x++) {
             map.tiles.add(new ArrayList<>());
 
-            for(int y = 0; y < mapSize; y++) {
+            for(int y = 0; y < mapGridSize; y++) {
                 map.tiles.get(x).add(map.createTile());
             }
         }
