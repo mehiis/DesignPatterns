@@ -56,7 +56,7 @@ public class CodeBreaker extends Game{
             for (int i = 0; i <= 30; i++) { System.out.println(); }
 
             if(!message.isEmpty()){
-                System.out.println("[Round " + gameTurns + "]\nGuessed numbers: ");
+                System.out.println("[Turn " + gameTurns + "]\nGuessed numbers: ");
                 for(int i = 0; i <= guessedNumbers.size() - 1; i++){
                     if(i != guessedNumbers.size() - 1)
                         System.out.println(guessedNumbers.get(i) + ", ");
