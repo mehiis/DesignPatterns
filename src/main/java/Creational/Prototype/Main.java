@@ -8,30 +8,24 @@ public class Main {
 
         Book book = new Book("Book #1", "Author #1", "Genre #1", 2005);
         Recommendation recommendation = new Recommendation("Audience #1");
-
-        Recommendation recommendation2 = null;
-        Recommendation recommendation3 = null;
+        recommendation.addBook(book);
 
         //CLONE BOOKS & ADD THEM UNDER A RECOMMENDATION
         for (int i = 2; i < 6; i++) {
-            try {
                 Book cloneBook = book.clone();
                 cloneBook.setTitle( "Book #" + i);
                 cloneBook.setAuthor("Author #" + i);
                 cloneBook.setGenre("Genre #" + i);
 
                 recommendation.addBook(cloneBook);
-            } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
         }
 
         //CLONE RECOMMENDATIONS
-        try {
-            recommendation2 = recommendation.clone();
-            recommendation2.setTargetAudience("Audience #2");
+        Recommendation recommendation2 = recommendation.clone();
+        recommendation2.setTargetAudience("Audience #2");
 
-            recommendation3 = recommendation.clone();
-            recommendation3.setTargetAudience("Audience #3");
-        } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
+        Recommendation recommendation3 = recommendation.clone();
+        recommendation3.setTargetAudience("Audience #3");
 
         System.out.println("\n" + recommendation + "\n" + recommendation2 + "\n" + recommendation3 + "\n\n\n\n### Books and Recommendations created, input 'q' to exit. ###");
 
@@ -40,7 +34,7 @@ public class Main {
 
 
 
-        //AWFUL COMMAND-LINE INTERFACE, SHOULD HAVE IMPLEMENTED WITH JAVAFX WOULD HAVE BEEN EASIER.....
+        //AWFUL COMMAND-LINE INTERFACE, SHOULD HAVE IMPLEMENTED WITH JAVAFX...
         Scanner input = new Scanner(System.in);
         String choice = "";
 
@@ -111,7 +105,6 @@ public class Main {
                         continue;
                     }
                     case "3" -> {
-                        try {
                             //PROTOTYPE CLONING!!!
                             Book cloneBook = book.clone();
 
@@ -129,8 +122,6 @@ public class Main {
 
                             currentRecommendation.addBook(cloneBook);
                             continue;
-                        } catch (CloneNotSupportedException e) { System.out.println("Invalid input. Could not add a new book."); }
-
                     }
                     case "4" -> {
                         currentBook = null;

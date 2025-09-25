@@ -14,17 +14,23 @@ public class Recommendation implements Cloneable {
 
     //DEEP CLONE
     @Override
-    public Recommendation clone() throws CloneNotSupportedException{
-        Recommendation clonedRecommendation = (Recommendation) super.clone();
-        clonedRecommendation.setTargetAudience(targetAudience);
+    public Recommendation clone(){
+        try {
+            Recommendation clonedRecommendation = (Recommendation) super.clone();
+            clonedRecommendation.setTargetAudience(targetAudience);
 
-        clonedRecommendation.bookList = new ArrayList<Book>();
+            clonedRecommendation.bookList = new ArrayList<Book>();
 
-        for(Book book : this.bookList){
-            clonedRecommendation.addBook(book.clone());
+            for (Book book : this.bookList) {
+                clonedRecommendation.addBook(book.clone());
+            }
+
+            return clonedRecommendation;
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
         }
 
-        return clonedRecommendation;
+        return null;
     }
 
     public void setBookList(List<Book> bookList) {

@@ -15,9 +15,15 @@ public class Book implements Cloneable{
     }
 
     @Override
-    public Book clone() throws CloneNotSupportedException{
-        Book clonedBook = (Book) super.clone();
-        return clonedBook;
+    public Book clone(){
+        try {
+            Book clonedBook = (Book) super.clone();
+            return clonedBook;
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     @Override
