@@ -1,7 +1,7 @@
 # Assignment 17: Prototype design pattern
 
 This is a simple project demonstrating the Prototype design pattern, using a basic command-line interface.
-<br><i>(For which I apologize, because the code is awful and I just should have done it wit JavaFX, but there was no turning back when I realized what an unholy mess I have made).</i>
+<br><i>For which I apologize, the code is awful, and I really should have used JavaFX. But there was no turning back once I realized what an unholy mess I had created. **Lessons were learned...**</i>
 
 In this project, `Book` and `Recommendation` classes are created once and then cloned to produce new instances, following the principles of the Prototype pattern.
 <br>
