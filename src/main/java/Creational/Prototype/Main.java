@@ -12,17 +12,6 @@ public class Main {
         Recommendation recommendation2 = null;
         Recommendation recommendation3 = null;
 
-        //CLONE RECOMMENDATIONS
-        try {
-            recommendation2 = recommendation.clone();
-            recommendation2.setTargetAudience("Audience #2");
-
-            recommendation3 = recommendation.clone();
-            recommendation3.setTargetAudience("Audience #3");
-        } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
-
-        System.out.println(book);
-
         //CLONE BOOKS & ADD THEM UNDER A RECOMMENDATION
         for (int i = 2; i < 6; i++) {
             try {
@@ -35,6 +24,7 @@ public class Main {
             } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
         }
 
+        //CLONE RECOMMENDATIONS
         try {
             recommendation2 = recommendation.clone();
             recommendation2.setTargetAudience("Audience #2");
@@ -44,6 +34,11 @@ public class Main {
         } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
 
         System.out.println("\n" + recommendation + "\n" + recommendation2 + "\n" + recommendation3 + "\n\n\n\n### Books and Recommendations created, input 'q' to exit. ###");
+
+
+
+
+
 
         //AWFUL COMMAND-LINE INTERFACE, SHOULD HAVE IMPLEMENTED WITH JAVAFX WOULD HAVE BEEN EASIER.....
         Scanner input = new Scanner(System.in);
