@@ -24,31 +24,24 @@ public class Main {
         System.out.println(book);
 
         //CLONE BOOKS & ADD THEM UNDER A RECOMMENDATION
-        for (int i = 2; i < 12; i++) {
+        for (int i = 2; i < 6; i++) {
             try {
                 Book cloneBook = book.clone();
                 cloneBook.setTitle( "Book #" + i);
                 cloneBook.setAuthor("Author #" + i);
+                cloneBook.setGenre("Genre #" + i);
 
-                if(i % 2 == 0){
-                    if(recommendation2 != null) {
-                        cloneBook.setGenre("Genre #2");
-                        recommendation2.addBook(cloneBook);
-                    }
-                } else if (i % 3 == 0){
-                    if(recommendation3 != null) {
-                        cloneBook.setGenre("Genre #3");
-                        recommendation3.addBook(cloneBook);
-                    }
-                } else{
-                        cloneBook.setGenre("Genre #1");
-                        recommendation.addBook(cloneBook);
-                }
-
-                System.out.println(cloneBook);
+                recommendation.addBook(cloneBook);
             } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
-
         }
+
+        try {
+            recommendation2 = recommendation.clone();
+            recommendation2.setTargetAudience("Audience #2");
+
+            recommendation3 = recommendation.clone();
+            recommendation3.setTargetAudience("Audience #3");
+        } catch (CloneNotSupportedException e) { System.out.println(e.getMessage()); }
 
         System.out.println("\n" + recommendation + "\n" + recommendation2 + "\n" + recommendation3 + "\n\n\n\n### Books and Recommendations created, input 'q' to exit. ###");
 
