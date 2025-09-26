@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //PROTOTYPE CLONING HAPPENING AT ROWS 17, 29 & 127.
         Book book = new Book("Book #1", "Author #1", "Genre #1", 2005);
         Recommendation recommendation = new Recommendation("Audience #1");
         recommendation.addBook(book);
