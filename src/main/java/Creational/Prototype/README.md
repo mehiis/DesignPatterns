@@ -1,4 +1,4 @@
-# Assignment 17: Prototype design pattern
+# Assignment 18: Prototype design pattern
 
 This is a simple project demonstrating the Prototype design pattern, using a basic command-line interface.
 <br><i>For which I apologize, the code is awful, and I really should have used JavaFX. But there was no turning back once I realized what an unruly mess I've made. **Lessons were learned...**</i>
