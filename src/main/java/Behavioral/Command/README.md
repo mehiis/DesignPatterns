@@ -11,4 +11,4 @@ The editor allows to create simple pixel sprites, with functionality like cursor
 <BR><BR>assignment: https://github.com/vesavvo/design_patterns/blob/6e1bbebcd52426f706901f04f986af35234a1fa6/markdown/assignments/command.md
 
 
-<img src="https://i.gyazo.com/1e27b2e87b12e9c46d5eed11bd7ce4eb.png" width="400"/>
+<img src="https://i.gyazo.com/1e27b2e87b12e9c46d5eed11bd7ce4eb.png" width="200"/>
